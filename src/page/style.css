@@ -1,0 +1,98 @@
+.video {
+  display: flex;
+}
+
+.video .video-player {
+  width: 100%;
+  background: aliceblue;
+}
+
+.video .video-player > div {
+  height: 50%
+}
+@media screen and (max-width: 1024px) {
+    .video .video-player {
+        width: 100%;
+      }
+      .video {
+        flex-flow: column;
+      }
+      
+  }
+
+.video .video-player iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.video .playlist {
+  flex-grow: 1;
+}
+
+.video-item {
+  width: 70%;
+  text-align: left;
+  margin: 20px 0;
+}
+
+.playlist-control {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.video-item .video-img {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.video-item .content {
+  margin-top: 10px;
+}
+.video-item .content .header {
+  font-weight: bold;
+  font-family: Oxygen;
+}
+
+.video-item img {
+  width: 100%;
+  height: 207px;
+  border-radius: 5px;
+  transform: scale(1.5);
+}
+
+.playlist-list {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.video-img{
+    position: relative;
+}
+.video-img .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+.overlay svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+    opacity: 0;
+}
+
+.video-img:hover .overlay{
+    background: rgba(0,0,0,0.6);
+
+}
+
+.video-img:hover svg{
+    opacity: 1;
+}
